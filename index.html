@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h3,
+        h4,
+        h5 {
+            color: #333;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .link{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            justify-content: space-between;
+            text-align: center;
+          
+        }
+        .link ul li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>HR Portal Documentation</h1>
+            <nav>
+                <ul>
+                    <li><a href="#how-to-create">How to Create</a></li>
+                    <li><a href="#dividing-work">Dividing the Work</a></li>
+                    <li><a href="#client-explanation">Client Explanation</a></li>
+                    <li><a href="#understanding">Understanding React, Frameworks, Context API, and Firebase</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="how-to-create">
+                <h2>How to Create the HR Portal Using React.js</h2>
+                <p>This guide explains how to build an HR portal using React.js, Firebase, and Context API.</p>
+                <h3>Prerequisites</h3>
+                <ul>
+                    <li>Node.js and npm: Install from <a href="https://nodejs.org/" target="_blank">nodejs.org</a>.</li>
+                    <li>React.js: Basic knowledge required.</li>
+                    <li>Firebase Account: Sign up at <a href="https://firebase.google.com/" target="_blank">Firebase
+                            Console</a>.</li>
+                </ul>
+                <h3>Project Setup</h3>
+                <ol>
+                    <li>Create React App
+                        <pre><code>npx create-react-app hr-portal
+cd hr-portal</code></pre>
+                    </li>
+                    <li>Install Dependencies
+                        <pre><code>npm install react-router-dom axios bootstrap firebase</code></pre>
+                    </li>
+                    <li>Firebase Setup: Create and configure your Firebase project.</li>
+                </ol>
+                <h3>Project Structure</h3>
+                <pre><code>hr-portal/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── context/
+│   ├── firebase.js
+│   ├── App.js
+│   └── index.js
+│
+├── .gitignore
+├── package.json
+└── README.md</code></pre>
+                <h3>Implementation</h3>
+                <ul>
+                    <li>Components: Develop reusable components like Header, Footer, Sidebar.</li>
+                    <li>Routing: Use `react-router-dom` for routing.</li>
+                    <li>State Management: Use Context API for global state management.</li>
+                    <li>Firebase Integration: Set up Firebase Firestore to handle data operations.</li>
+                    <li>Styling: Apply Bootstrap and custom CSS for styling.</li>
+                </ul>
+                <h3>Testing and Deployment</h3>
+                <ul>
+                    <li>Testing: Write tests using Jest and React Testing Library.</li>
+                    <li>Deployment: Build and deploy the app to platforms like Vercel or Netlify.</li>
+                </ul>
+            </section>
+
+            <section id="dividing-work">
+                <h2>Dividing the Work Among Four Developers</h2>
+                <h3>Hafiz Muhammad Bilal: Frontend Development</h3>
+                <ul>
+                    <li>Set up the project and configure routing.</li>
+                    <li>Develop UI components (Header, Footer, Sidebar).</li>
+                    <li>Implement and style pages.</li>
+                </ul>
+                <h3>Ahmad Mujahid: Backend Integration and Firebase Setup</h3>
+                <ul>
+                    <li>Create and configure the Firebase project.</li>
+                    <li>Implement API services to interact with Firebase.</li>
+                    <li>Handle data synchronization and CRUD operations.</li>
+                </ul>
+                <h3>Developer 3: Context API and State Management</h3>
+                <ul>
+                    <li>Implement Context API for state management.</li>
+                    <li>Create context providers for authentication and data management.</li>
+                    <li>Integrate state management into components.</li>
+                </ul>
+                <h3>Developer 4: Testing and Deployment</h3>
+                <ul>
+                    <li>Write unit tests with Jest and React Testing Library.</li>
+                    <li>Implement end-to-end testing with Cypress.</li>
+                    <li>Build and deploy the application.</li>
+                </ul>
+            </section>
+
+            <section id="client-explanation">
+                <h2>Client Project Explanation Document</h2>
+                <h3>Project Overview</h3>
+                <p>The HR Portal is a web application designed to streamline HR processes, built using React.js,
+                    Firebase, and Context API.</p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Employee Management: View, add, update, and delete employee records.</li>
+                    <li>Leave Requests: Apply for and manage leave requests.</li>
+                    <li>User Authentication: Secure login and access control.</li>
+                </ul>
+                <h3>Project Components</h3>
+                <ul>
+                    <li>Frontend: Developed with React.js for a dynamic UI.</li>
+                    <li>Backend: Firebase Firestore for data storage.</li>
+                    <li>State Management: Managed with Context API.</li>
+                </ul>
+                <h3>User Experience</h3>
+                <ul>
+                    <li>Intuitive Interface: Easy navigation with a clear layout.</li>
+                    <li>Responsive Design: Compatible with various devices and screen sizes.</li>
+                </ul>
+                <h3>Benefits</h3>
+                <ul>
+                    <li>Streamlined HR Processes: Simplifies management tasks and data handling.</li>
+                    <li>Scalability: Ready for future updates and feature additions.</li>
+                </ul>
+                <h3>Next Steps</h3>
+                <ul>
+                    <li>Review: Evaluate progress and provide feedback.</li>
+                    <li>Testing: Conduct user acceptance testing.</li>
+                    <li>Deployment: Finalize deployment to the chosen platform.</li>
+                </ul>
+            </section>
+
+            <section id="understanding">
+                <h2>Understanding React, Frameworks, Context API, and Firebase</h2>
+                <h3>What is React?</h3>
+                <p>React is a JavaScript library developed by Facebook for building user interfaces, particularly
+                    single-page applications where data changes over time. It allows for the creation of reusable UI
+                    components that manage their own state.</p>
+                <p><a href="https://reactjs.org/" target="_blank">Official Site: React.js</a></p>
+                <h3>What is a Framework?</h3>
+                <p>A framework provides a foundation for developing software applications. It includes pre-written code
+                    and tools to streamline development. Examples include Angular, Vue.js, and Express.js.</p>
+                <h3>React Context API</h3>
+                <p>The Context API in React is a way to manage and share state globally without passing props manually
+                    through multiple levels of components.</p>
+                <p><a href="https://reactjs.org/docs/context.html" target="_blank">Documentation: React Context API</a>
+                </p>
+                <h4>How to Use Context API:</h4>
+                <h5>Create a Context:</h5>
+                <pre><code>import React, { createContext, useState } from 'react';
+
+export const MyContext = createContext();
+
+export const MyProvider = ({ children }) => {
+    const [state, setState] = useState('default value');
+
+    return (
+        <MyContext.Provider value={[state, setState]}>
+            {children}
+        </MyContext.Provider>
+    );
+};</code></pre>
+                <h5>Use Context in Components:</h5>
+                <pre><code>import React, { useContext } from 'react';
+import { MyContext } from './MyProvider';
+
+const MyComponent = () => {
+    const [state, setState] = useContext(MyContext);
+
+    return <div>{state}</div>;
+};</code></pre>
+                <h3>Firebase Overview</h3>
+                <p>Firebase is a platform developed by Google that provides a suite of cloud-based tools for developing
+                    mobile and web applications. It offers features like real-time databases, authentication, and
+                    hosting.</p>
+                <p><a href="https://firebase.google.com/" target="_blank">Official Site: Firebase</a></p>
+                <h4>How to Use Firebase:</h4>
+                <h5>Setup Firebase:</h5>
+                <ol>
+                    <li>Create a Firebase project in the <a href="https://console.firebase.google.com/"
+                            target="_blank">Firebase Console</a>.</li>
+                    <li>Add Firebase SDK to your project by installing it:
+                        <pre><code>npm install firebase</code></pre>
+                    </li>
+                    <li>Initialize Firebase in your application:
+                        <pre><code>import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();</code></pre>
+                    </li>
+                </ol>
+                <h5>Using Firebase Firestore:</h5>
+                <p>Firestore is a flexible, scalable database for mobile, web, and server development. You can perform
+                    CRUD operations as follows:</p>
+                <pre><code>// Add a new document
+db.collection('employees').add({
+    name: 'John Doe',
+    position: 'Developer',
+    department: 'Engineering'
+})
+.then(() => console.log('Document successfully written!'))
+.catch((error) => console.error('Error writing document: ', error));
+
+// Retrieve documents
+db.collection('employees').get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, ' => ', doc.data());
+        });
+    })
+    .catch((error) => console.error('Error getting documents: ', error));
+
+// Update a document
+db.collection('employees').doc('DOCUMENT_ID').update({
+    position: 'Senior Developer'
+})
+.then(() => console.log('Document successfully updated!'))
+.catch((error) => console.error('Error updating document: ', error));
+
+// Delete a document
+db.collection('employees').doc('DOCUMENT_ID').delete()
+    .then(() => console.log('Document successfully deleted!'))
+    .catch((error) => console.error('Error deleting document: ', error));</code></pre>
+                <h3>Helpful Links:</h3>
+                <ul>
+                    <li><a href="https://firebase.google.com/docs" target="_blank">Firebase Documentation</a></li>
+                    <li><a href="https://reactjs.org/docs/context.html" target="_blank">React Context API Guide</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="link">
+                <ul>
+                    <li>https://www.youtube.com/watch?v=koXRuZKsCJw</li>
+                    <li> https://www.youtube.com/watch?v=JiF9anzVqM4</li>
+                    <li>https://www.youtube.com/watch?v=j0F0l_bvAyU</li>
+                    <li>https://www.youtube.com/watch?v=sUluT8ebM3M&list=PLDkQjjpofKjCo_s_ltDTk2OIv03n95kj7&index=3</li>
+                    <li> https://www.youtube.com/results?search_query=create+hrportal+project+with+pure+react</li>
+                </ul>
+            </div>
+            <p>&copy; 2024 HR Portal Documentation by Bilal</p>
+        </div>
+    </footer>
+</body>
+
+</html>
